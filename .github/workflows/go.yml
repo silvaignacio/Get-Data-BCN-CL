@@ -7,22 +7,27 @@ on:
     branches: [ "master" ]
 
 jobs:
-
+  sast:
+    runs-on: ubuntu-latest
+    env:
+      GO111MODULE: on
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v2
+      - name: Test
+        run: go test -v ./...
+      - name: Run Gosec Security Scanner
+        uses: securego/gosec@master
+        with:
+         args: ./...
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Run Gosec Security Scanner
-        uses: securego/gosec@master
+      - uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v3
         with:
-          args: ./...
-    - name: Set up Go
-      uses: actions/setup-go@v3
-      with:
-        go-version: 1.18
+          go-version: 1.18
 
-    - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
+      - name: Build
+        run: go build -v ./...
