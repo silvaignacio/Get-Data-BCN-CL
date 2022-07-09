@@ -8,18 +8,6 @@ import (
 	"net/http"
 )
 
-// GetIPLocationResponse will hold the Soap response
-type GetIPLocationResponse struct {
-	GetIPLocationResult string `xml:"GetIpLocationResult"`
-}
-
-// GetIPLocationResult will
-type GetIPLocationResult struct {
-	XMLName xml.Name `xml:"GeoIP"`
-	Country string   `xml:"Country"`
-	State   string   `xml:"State"`
-}
-
 type Organismos struct {
 	XMLName   xml.Name `xml:"ORGANISMOS"`
 	Organismo string   `xml:"ORGANISMO"`
