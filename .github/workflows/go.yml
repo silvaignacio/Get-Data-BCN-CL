@@ -40,3 +40,4 @@ jobs:
           runtime: go116
           event_trigger_type: http
           entry_point: main
+          eventTriggerType: 'providers/cloud.firestore/eventTypes/document.create'
