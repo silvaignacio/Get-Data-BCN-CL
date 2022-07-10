@@ -38,4 +38,5 @@ jobs:
         with:
           name: BCN-Chile
           runtime: go116
-          args: --entrypoint=main
+          event_trigger_type: http
+          entrypoint: main
