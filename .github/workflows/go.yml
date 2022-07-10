@@ -18,7 +18,7 @@ jobs:
         uses: securego/gosec@master
         with:
          args: -fmt=json -out=results.json ./...
-  build and deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     needs: sast
     steps:
