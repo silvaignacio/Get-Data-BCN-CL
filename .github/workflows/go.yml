@@ -35,4 +35,4 @@ jobs:
           name: Rules from BCN Chile
           runtime: go116
           project: ${{ secrets.gcp_project }}
-          credentials: ${{ secrets.gcp_credentials }}
+          credentials_json: ${{ secrets.gcp_credentials }}
