@@ -8,21 +8,18 @@ import (
 )
 
 func GetDataBCN(c *gin.Context) {
+
 	resp, _ := http.Get(os.Getenv("BCN_URL"))
 
 	defer resp.Body.Close()
 
 	data := utils.ProcessRulesBody(resp.Body)
+
 	c.JSON(http.StatusOK, gin.H{
 		"code":    http.StatusOK,
 		"message": data, // cast it to string before showing
 	})
-	//c.HTML(http.StatusOK,
-	//	"index.html",
-	//	gin.H{
-	//		"title": "Normas publicadas",
-	//		"data":  data.Rule,
-	//	})
+
 }
 
 func GetRuleDataById(c *gin.Context) {
@@ -32,10 +29,8 @@ func GetRuleDataById(c *gin.Context) {
 
 	data := utils.ProcessRuleBody(resp.Body)
 
-	c.HTML(http.StatusOK,
-		"rule.html",
-		gin.H{
-			"title":    data.Metadata.Title,
-			"subtitle": data.Identifier.Organisms.Organism,
-		})
+	c.JSON(http.StatusOK, gin.H{
+		"code":    http.StatusOK,
+		"message": data, // cast it to string before showing
+	})
 }
