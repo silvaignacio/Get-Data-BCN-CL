@@ -2,8 +2,8 @@ package utils
 
 import (
 	"encoding/xml"
-	"example.com/main/model/all"
-	"example.com/main/model/by"
+	"example.com/go-rest-api/model/all"
+	"example.com/go-rest-api/model/by"
 	"io"
 	"io/ioutil"
 )
