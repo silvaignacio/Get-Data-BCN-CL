@@ -1,8 +1,8 @@
 package main
 
 import (
-	"example.com/go-rest-api/controllers"
-	"example.com/go-rest-api/controllers/rule"
+	"example.com/main/controllers"
+	"example.com/main/controllers/rule"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
