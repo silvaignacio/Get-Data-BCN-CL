@@ -1,4 +1,4 @@
-package go_rest_api
+package main
 
 import (
 	"example.com/go-rest-api/controllers"
