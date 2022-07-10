@@ -1,4 +1,4 @@
-package main
+package go_rest_api
 
 import (
 	"example.com/go-rest-api/controllers"
@@ -12,7 +12,7 @@ var (
 	NotFoundError = fmt.Errorf("resource could not be found")
 )
 
-func main() {
+func Main() {
 	router := gin.Default()
 	router.Use(
 		controllers.ErrorHandler(

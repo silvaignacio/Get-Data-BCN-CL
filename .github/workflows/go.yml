@@ -38,4 +38,4 @@ jobs:
         with:
           name: BCN-Chile
           runtime: go116
-          entry_point: main
+          entry_point: Main
