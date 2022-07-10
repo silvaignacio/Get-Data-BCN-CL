@@ -25,5 +25,5 @@ func main() {
 	router.GET("/data-bcn", rule.GetDataBCN)
 	router.GET("/data-bcn/:id", rule.GetRuleDataById)
 
-	router.Run("localhost:8080")
+	router.Run("localhost:80")
 }
