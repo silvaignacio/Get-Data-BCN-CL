@@ -53,10 +53,22 @@ func getDataBCN(c *gin.Context) {
 		fmt.Println(" ")
 	}
 
+	c.HTML(http.StatusOK,
+		"index.html",
+		gin.H{
+			"title": "Home Page",
+			"data":  result.Rule,
+		})
+
 }
+
+var (
+	NotFoundError = fmt.Errorf("resource could not be found")
+)
 
 func main() {
 	router := gin.Default()
+	router.LoadHTMLGlob("templates/*")
 	router.GET("/data-bcn", getDataBCN)
 
 	router.Run("localhost:8080")
