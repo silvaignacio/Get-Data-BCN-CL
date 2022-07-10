@@ -21,7 +21,7 @@ func main() {
 				c.Writer.Write([]byte(err.Error()))
 			}),
 		))
-	router.LoadHTMLGlob("templates/*")
+
 	router.GET("/data-bcn", rule.GetDataBCN)
 	router.GET("/data-bcn/:id", rule.GetRuleDataById)
 

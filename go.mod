@@ -5,6 +5,7 @@ go 1.16
 require github.com/gin-gonic/gin v1.8.1
 
 require (
+	github.com/basgys/goxml2json v1.1.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.0 // indirect
 	github.com/goccy/go-json v0.9.8 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

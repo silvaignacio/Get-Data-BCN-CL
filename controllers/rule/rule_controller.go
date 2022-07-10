@@ -13,14 +13,16 @@ func GetDataBCN(c *gin.Context) {
 	defer resp.Body.Close()
 
 	data := utils.ProcessRulesBody(resp.Body)
-
-	c.HTML(http.StatusOK,
-		"index.html",
-		gin.H{
-			"title": "Normas publicadas",
-			"data":  data.Rule,
-		})
-
+	c.JSON(http.StatusOK, gin.H{
+		"code":    http.StatusOK,
+		"message": data, // cast it to string before showing
+	})
+	//c.HTML(http.StatusOK,
+	//	"index.html",
+	//	gin.H{
+	//		"title": "Normas publicadas",
+	//		"data":  data.Rule,
+	//	})
 }
 
 func GetRuleDataById(c *gin.Context) {
