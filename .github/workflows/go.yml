@@ -20,7 +20,6 @@ jobs:
          args: -fmt=json -out=results.json ./...
   build-deploy:
     runs-on: ubuntu-latest
-    needs: sast
     steps:
       - uses: actions/checkout@v3
       - name: Set up Go
