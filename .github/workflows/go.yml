@@ -38,4 +38,3 @@ jobs:
         with:
           name: BCN-Chile
           runtime: go116
-          project_id: '${{ secrets.gcp_project }}'
