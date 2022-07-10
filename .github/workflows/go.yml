@@ -36,6 +36,6 @@ jobs:
         id: deploy-function
         uses: google-github-actions/deploy-cloud-functions@v0.1.0
         with:
-          name: Rules from BCN Chile
+          name: BCN-Chile
           runtime: go116
-          project_id: ${{ secrets.gcp_project }}
+          project_id: '${{ secrets.gcp_project }}'
