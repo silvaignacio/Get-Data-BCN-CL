@@ -38,3 +38,4 @@ jobs:
         with:
           name: BCN-Chile
           runtime: go116
+          args: --entrypoint=main
