@@ -1,8 +1,8 @@
 package rule
 
 import (
-	"example.com/go-rest-api/utils"
 	"github.com/gin-gonic/gin"
+	"go-rest-api/utils"
 	"net/http"
 	"os"
 )
